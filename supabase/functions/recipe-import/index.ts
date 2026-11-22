@@ -214,7 +214,8 @@ function parseHtmlFallback(page:string):Record<string,unknown>|null{
   const normalize=(raw:string[],max:number)=>[...new Set(raw.map(x=>x.replace(/^\d{1,2}[\.)]\s*/,"").trim()))].filter(x=>x.length>3).slice(0,max);
   ingredients=normalize(ingredients,85).filter(x=>x.length<250);
   steps=normalize(steps,50).filter(x=>x.length>15);
-  if(!steps.length||(!ingredients.length&&steps.join(" ").length<120))return null;
+  if(!steps.length&&!ingredients.length)return null;
+  if(steps.length&&!ingredients.length&&steps.join(" ").length<120)return null;
   const name=plain(html.match(/<h1\b[^>]*>([\s\S]*?)<\/h1\s*>/i)?.[1]??"").slice(0,120);
   const headline=name.replace(/\s*[-|]\s*(chefkoch|rezept|lecker)\s*$/i,"");
   return {
