@@ -6,8 +6,8 @@ Eine gemütliche, pastellfarbene Koch-App, die die Lieblingsrezepte aus verschie
 
 ## ✅ Stand des Prototyps
 
-- 36 importierte Rezeptkarten mit Originalquellen
-- Bei 18 Rezepten: Zutaten, Kurz-Anleitung und Portionsrechner
+- 36 importierte Rezeptkarten mit Originalquellen + unser Subway-Style-Cookie-Familienrezept
+- Bei 19 Rezepten: Zutaten, Kurz-Anleitung und Portionsrechner
 - 18 weitere Rezepte: Rezeptkarte mit Link zur Originalquelle
 - Rezeptsuche, Kategorien und Favoriten
 - Eigene Rezepte manuell oder aus eingefügtem Rezepttext erstellen
