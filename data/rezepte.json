@@ -1,5 +1,76 @@
 [
   {
+    "id": "anders-family-cookies-subway-2026",
+    "title": "Unsere Subway-Style Cookies",
+    "description": "Außen leicht knusprig, innen weich und chewy – unsere Familien-Cookies mit extra viel Schokolade. Ergibt ca. 80 große Cookies à 40–45 g Teig.",
+    "category": "Backen & Süßes",
+    "time": 155,
+    "portions": 80,
+    "emoji": "🍪",
+    "color": "#f7dfe3",
+    "image": "",
+    "favorite": true,
+    "source": "",
+    "ingredients": [
+      {
+        "amount": 500,
+        "unit": "g",
+        "name": "Butter"
+      },
+      {
+        "amount": 875,
+        "unit": "g",
+        "name": "brauner Zucker"
+      },
+      {
+        "amount": 5,
+        "unit": "Stück",
+        "name": "Eier (Größe L)"
+      },
+      {
+        "amount": 2,
+        "unit": "TL",
+        "name": "Vanilleextrakt"
+      },
+      {
+        "amount": 1110,
+        "unit": "g",
+        "name": "Mehl"
+      },
+      {
+        "amount": 40,
+        "unit": "g",
+        "name": "Speisestärke"
+      },
+      {
+        "amount": 2.5,
+        "unit": "TL",
+        "name": "Backpulver"
+      },
+      {
+        "amount": 2,
+        "unit": "TL",
+        "name": "Salz"
+      },
+      {
+        "amount": 550,
+        "unit": "g",
+        "name": "Schokolade (gehackt oder Drops)"
+      }
+    ],
+    "steps": [
+      "Butter und braunen Zucker cremig aufschlagen. Eier nach und nach sowie den Vanilleextrakt einrühren.",
+      "Mehl, Speisestärke, Backpulver und Salz vermischen. Nur kurz unter die Buttermasse rühren, damit die Cookies später weich bleiben.",
+      "Die Schokolade unterheben und den Teig mindestens 2 Stunden im Kühlschrank kühlen.",
+      "Aus dem gekühlten Teig lockere Kugeln zu je 40–45 g formen. Nicht flach drücken! Mit 6–8 cm Abstand auf Backpapier setzen. Nach dem Formen bei Bedarf weitere 20–30 Minuten kühlen.",
+      "Bei 180 °C Ober-/Unterhitze etwa 10–13 Minuten backen. Die Ränder sollen leicht goldbraun und die Mitte noch weich sein; beim Abkühlen werden die Cookies fester.",
+      "Etwa 10 Minuten auf dem Blech ruhen lassen. Danach mitsamt Backpapier vom Blech ziehen und vollständig abkühlen lassen."
+    ],
+    "sourceStatus": "geprüft",
+    "unitLabel": "Cookies",
+    "note": "Bei etwa 35 g Teig pro Kugel werden es ungefähr 95 Cookies. Dann die Backzeit früher kontrollieren. Für dicke, weiche Cookies die Kugeln vor dem Backen nicht flach drücken."
+  },
+  {
     "id": "anders-import-01",
     "title": "Zwiebelkuchen",
     "description": "Deftiger Zwiebelkuchen für die ganze Familie.",
