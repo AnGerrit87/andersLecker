@@ -4,10 +4,12 @@ Stand: 22.11.2026. Dieses Dokument beschreibt geplante Funktionen und noch nicht
 
 ## Phase 1 – Gemeinsames Familienkochbuch (Priorität 1)
 
-- [ ] Supabase-Projekt verbinden und eine PostgreSQL-Datenbank einrichten
-- [ ] Familie und Mitgliedschaften für zwei oder mehr Accounts (Gerrit und Ronja)
+- [x] Supabase-Projekt `anders-lecker` in Frankfurt (`eu-central-1`) erstellt und PostgreSQL-Datenbank vorbereitet
+- [x] Tabellen und RLS für Familienmitgliedschaften, Rezepte, Sterne, Einkaufslisten und Wochenplanung angelegt
+- [ ] Sichere Familien-Einladung und Mitgliedschaft für zwei oder mehr Accounts ermöglichen
 - [ ] Supabase Auth (E-Mail/Passwort oder Magic Link); Zugriff nur für eingeladene Familienmitglieder
-- [ ] Supabase Storage in einem **privaten** Bucket für eigene Rezeptfotos; signierte Leselinks und Upload/Update/Löschen mit RLS
+- [x] Privater Storage-Bucket `recipe-photos` mit RLS für Familienmitglieder eingerichtet (max. 5 MB, JPEG/PNG/WebP)
+- [ ] Foto-Upload und signierte Leselinks in der Web-App mit Familienanmeldung verbinden
 - [ ] Alte lokale Rezepte, Bilder, Bewertungen, Favoriten und Einkaufslisten über Backup/Migrationsassistent importieren, ohne Daten zu überschreiben
 - [ ] Synchronisierung und Konfliktbehandlung (Updated-at, Änderungsprotokoll)
 - [ ] Automatische Backups/Export
@@ -52,3 +54,17 @@ Bring! importiert von einer öffentlich erreichbaren Rezeptseite, die von ihren 
 2. Lokale Daten in die Cloud migrieren; beide Familien-Accounts testen.
 3. Bring!-Backend mit **genauer** Wunschmenge integrieren.
 4. Wochenplaner, Einkaufsliste und die restlichen Komfortfunktionen nacheinander einbauen.
+
+## Supabase-Projekt – angelegt am 22.11.2026
+
+- Projekt: [anders-lecker](https://supabase.com/dashboard/project/sisabhrlstgprgxjdnns)
+- Region: Frankfurt (`eu-central-1`)
+- Kostenangebot zum Erstellungszeitpunkt: 0 USD/Monat (Free; Nutzungslimits gelten)
+- Öffentliche Projekt-URL (keine Zugangsdaten): `https://sisabhrlstgprgxjdnns.supabase.co`
+- Tabellen: `families`, `family_members`, `recipes`, `recipe_ratings`, `shopping_items`, `meal_plans`
+- Private Storage: `recipe-photos` (JPEG/PNG/WebP, 5 MB je Datei), Familien-Verzeichnis unter `<family_id>/`
+- Alle sechs Tabellen haben RLS, Familienzugriff über Mitgliedschaft; SQL-Test auf anonyme Abfragen ergab keine lesbaren Familien.
+- Sicherheits-Advisors zum Zeitpunkt der Erstellung: keine Meldungen.
+- **Wichtig:** Die Web-App nutzt derzeit weiter den lokalen Browser-Speicher. Die Cloud-Funktionen sind auf Datenbank-Seite vorbereitet, aber Benutzeranmeldung, Cloud-Migration, synchronisierte Bildverwaltung und Familien-Einladung sind noch nicht mit dem Frontend verbunden.
+- Ein Familienkonto ist noch nicht angelegt, weil dafür zuerst eine authentifizierte Anmeldung nötig ist.
+- Keine privaten Zugangsdaten ins Repository committen. Nur publishable Keys dürfen später für den Browser eingesetzt werden.
