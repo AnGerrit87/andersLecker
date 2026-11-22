@@ -72,3 +72,13 @@ Erstellt als erster gemeinsamer App-Prototyp – mit Liebe zum Kochen. 💗
 - **Achtung:** Ein Import über den Original-Link übernimmt NICHT die geänderte Portionsmenge und auch keine nachträglichen Änderungen in Anders lecker! Auf Wunschmenge umgerechnete Zutaten lassen sich bereits kopieren.
 - Die direkte Übernahme beliebig skalierter Zutaten in Bring! benötigt eine öffentlich erreichbare, kurzfristige schema.org-Rezeptseite, die von einem Backend erzeugt wird. Die Familien-Datenbank bleibt dabei geschützt.
 - GitHub Pages allein kann eine solche temporäre Seite aus lokal im Browser gespeicherten Rezepten nicht für Bring! bereitstellen. Bring!-Zugangsdaten oder inoffizielle Listen-Schreib-APIs sind für den vorgesehenen Rezeptimport nicht notwendig.
+
+## Bring! Export für alle Rezeptkarten (November 2026)
+
+- Im geöffneten Rezept die gewünschte Anzahl an Portionen/Stücken eingeben, dann **Zu Bring! übertragen** auswählen.
+- Das funktioniert unabhängig von einer Chefkoch-Quelle – auch für selbst erstellte Cookies und andere eigene Rezepte.
+- Die App übergibt nur Rezepttitel, aktuelle Menge und die umgerechneten Zutaten an die öffentliche, stateless Supabase Edge Function `bring-recipe`. Diese liefert serverseitig ein HTML-Dokument mit `schema.org/Recipe` als JSON-LD, damit Bring! die Mengen auslesen kann.
+- Auf der Bring!-Seite die erkannten Zutaten kontrollieren, bevor sie der Einkaufsliste hinzugefügt werden. Die endgültige Übernahme hängt vom Bring!-Parser und vom App-/Browser-Deep-Link ab.
+- Diese Export-Rezeptvorschau ist **über ihre URL öffentlich erreichbar**, weil Bring!-Server sie ohne Anmeldung lesen müssen. Keine Fotos, Kontodaten, private Notizen oder Geheimnisse mitsenden.
+- Es werden **keine** Cloud-Zugangsdaten benötigt und keine privaten Familien-Datenbanktabellen gelesen oder verändert. Der Export-Link enthält die Daten selbst (Base64URL-kodiert, nicht verschlüsselt) und wird im Backend nicht persistent gespeichert.
+- Fallback bei Import-Problemen: **Zutaten kopieren**.
