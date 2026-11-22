@@ -92,3 +92,12 @@ Erstellt als erster gemeinsamer App-Prototyp – mit Liebe zum Kochen. 💗
 - Ein übernommener Entwurf muss im Bearbeitungsformular **explizit gespeichert** werden.
 - Es werden **keine** Fotos der Quellseiten oder privaten Daten an den Lesedienst übertragen. Der Lesedienst lädt lediglich den eingegebenen HTTPS-Rezeptlink und nutzt keine private Supabase-Datenbank.
 - Die Funktion läuft derzeit ohne Familien-Login und speichert die importierten Texte weiterhin nur lokal im verwendeten Browser.
+
+## 🍕 Waldis Pizza: Original italienischer Pizzateig
+
+- Der Import akzeptiert jetzt `waldispizza.de` und `www.waldispizza.de` über die sichere Domain-Freigabeliste.
+- Die spezifische Seite `https://www.waldispizza.de/blog/italienischer-pizzateig-rezept` besitzt einen anhand der Originalseite geprüften Fallback für sechs Pizzen und zehn Zubereitungsschritte. Der Fallback ist eine **Kurzfassung in eigenen Worten**, kein wortgetreuer Komplettabdruck.
+- Wenn der Abruf blockiert oder kein passendes Rezept-JSON-LD vorliegt, bietet der Import weiterhin diese geprüfte Kurzfassung an. Eine entsprechende Meldung steht in der Importvorschau.
+- Zutatenbereiche wie `1–2 g frische Hefe` werden jetzt als `amountRange` gespeichert und skaliert (z. B. auf drei Pizzen: `0,5–1 g`).
+- Der Import wird wie gewohnt **erst nach Bestätigung** im Browser gespeichert; eigene Fotos und Bewertungen bleiben erhalten.
+- Die Edge-Function-Quelle liegt zur Nachvollziehbarkeit unter `supabase/functions/recipe-import/index.ts` und ist im Supabase-Projekt bereitgestellt. Die tatsächlich live deployte Funktionsversion ist maßgeblich.
