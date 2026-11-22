@@ -101,3 +101,14 @@ Erstellt als erster gemeinsamer App-Prototyp – mit Liebe zum Kochen. 💗
 - Zutatenbereiche wie `1–2 g frische Hefe` werden jetzt als `amountRange` gespeichert und skaliert (z. B. auf drei Pizzen: `0,5–1 g`).
 - Der Import wird wie gewohnt **erst nach Bestätigung** im Browser gespeichert; eigene Fotos und Bewertungen bleiben erhalten.
 - Die Edge-Function-Quelle liegt zur Nachvollziehbarkeit unter `supabase/functions/recipe-import/index.ts` und ist im Supabase-Projekt bereitgestellt. Die tatsächlich live deployte Funktionsversion ist maßgeblich.
+
+## 🌍 Breiter Rezeptimport (November 2026)
+
+- Der Import kennt **über 90 bekannte Koch- und Backdomains**, darunter Chefkoch, LECKER, Essen & Trinken, Kitchen Stories, Kochbar, EAT SMARTER, Gute Küche, REWE, EDEKA, einfache Rezeptseiten und viele Foodblogs. Auch internationale Seiten sind abgedeckt.
+- Die aktuelle, verbindliche Liste der erlaubten Domains befindet sich in `supabase/functions/recipe-import/index.ts` (`allowedDomains`). Nur diese Domains und bestimmte gebräuchliche Subdomains dürfen vom öffentlichen Importdienst abgerufen werden. Das verhindert einen frei missbrauchbaren Web-Proxy und schränkt SSRF-Angriffsflächen ein.
+- Der Parser versucht nacheinander: **Schema.org Recipe/JSON-LD** (inklusive verschachtelter HowTo-Schritte und `@graph`), **WordPress Recipe Maker / Tasty Recipes / HTML-Rezeptkarten** sowie **sichtbare Zutaten-/Zubereitungsabschnitte**.
+- Rezepte werden als Vorschau mit Zutaten, Schritten und, falls ermittelbar, Portionen/Zeit dargestellt. Nichts wird ohne ausdrückliches Speichern in der App übernommen.
+- Falls die Seite automatisierte Zugriffe mit Login, Paywall, Captcha, Cloudflare oder `HTTP 403/429` blockiert, erscheint eine Meldung. **Alternative:** Rezepttext einfügen, Foto scannen oder nur den Link speichern.
+- **Keine Garantie für jede einzelne Webseite/Unterseite:** Die verschiedenen Portale verändern ihren HTML-Aufbau. Die Unterstützung ist best effort und an die Verfügbarkeit der öffentlich sichtbaren Rezeptdaten gebunden.
+- Der Importdienst benötigt keine Anmeldung und erhält nur den angegebenen Rezeptlink. Er liest keine privaten Rezeptfotos oder Datenbanktabellen aus.
+- Technische Prüfung: Parser mit synthetischen Beispielen für JSON-LD `@graph`, `HowToSection`, HTML-escaped JSON, WordPress-Rezeptkarten und Abschnittsüberschriften getestet. Live-Imports von jeder der über 90 Websites sind noch nicht vollständig verifiziert.
