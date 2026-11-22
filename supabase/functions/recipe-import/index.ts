@@ -122,6 +122,114 @@ function parseStructured(markup:string):Record<string,unknown>|null{
   const title=plain(recipe.name).slice(0,120);
   return {title,description:plain(recipe.description).slice(0,320),steps,ingredients,portions:yieldInfo.portions,unitLabel:yieldInfo.unitLabel,time,sourceStatus:"aus-originalseite"};
 }
+
+// Second extraction path for WordPress Recipe Maker, Tasty Recipes and
+// websites that only publish visible instructions/ingredients (no Recipe JSON-LD).
+// This is conservative: prefer clear recipe-specific classes/headings.
+function htmlListItems(markup:string,classToken:string):string[]{
+  const pat=/<li\b([^>]*)>([\s\S]*?)<\/li>/gi;
+  const found:string[]=[];let m:RegExpExecArray|null;
+  while((m=pat.exec(markup))!==null){
+    const attr=m[1];
+    if(!new RegExp("class\\s*=\\s*['\\\"][^'\\\"]*\\b"+classToken+"\\b","i").test(attr))continue;
+    const val=plain(m[2]);
+    if(val.length>2&&val.length<1600)found.push(val);
+    if(found.length>=85)break;
+  }
+  return found;
+}
+function htmlNamedItems(markup:string,tag:string,token:string):string[]{
+  const matcher=new RegExp("<"+tag+"\\b([^>]*)>([\\s\\S]*?)<\\/"+tag+"\\s*>","gi");
+  const out:string[]=[];let match:RegExpExecArray|null;
+  const expected=new RegExp("(?:class|itemprop)\\s*=\\s*['\\\"][^'\\\"]*\\b"+token+"\\b","i");
+  while((match=matcher.exec(markup))!==null){
+    if(!expected.test(match[1]))continue;
+    const val=plain(match[2]);
+    if(val.length>2&&val.length<1500)out.push(val);
+    if(out.length>=85)break;
+  }
+  return out;
+}
+function section(markup:string, heading:string):string{
+  const heads=/<h([2-5])\b[^>]*>([\s\S]*?)<\/h\1\s*>/gi;
+  let current:RegExpExecArray|null;
+  while((current=heads.exec(markup))!==null){
+    const t=plain(current[2]).replace(/\s*[:]\s*$/,"");
+    if(!new RegExp("^("+heading+")(?:\\s|$)","i").test(t))continue;
+    const start=heads.lastIndex;
+    const next=/<h([2-5])\b[^>]*>[\s\S]*?<\/h\1\s*>/gi;
+    next.lastIndex=start;
+    const stop=next.exec(markup)?.index??Math.min(markup.length,start+17000);
+    return markup.slice(start,Math.min(stop,start+17000));
+  }
+  return "";
+}
+function bodyList(sectionHtml:string):string[]{
+ const found:string[]=[];
+ const list=/<li\b[^>]*>([\s\S]*?)<\/li>/gi;let m:RegExpExecArray|null;
+ while((m=list.exec(sectionHtml))!==null){
+   const val=plain(m[1]);if(val.length>2&&val.length<1400)found.push(val);
+   if(found.length>=80)break;
+ }
+ return found;
+}
+function bodyParagraphs(sectionHtml:string):string[]{
+ const found:string[]=[];
+ const paras=/<(?:p|div)\b[^>]*>([\s\S]*?)<\/(?:p|div)\s*>/gi;let m:RegExpExecArray|null;
+ while((m=paras.exec(sectionHtml))!==null){
+   const val=plain(m[1]);if(val.length>22&&val.length<1600)found.push(val);
+   if(found.length>=55)break;
+ }
+ return found;
+}
+function parseHtmlFallback(page:string):Record<string,unknown>|null{
+  // Ignore scripts and style elements; these frequently contain unrelated links
+  // and recommendation texts and should never be considered cooking steps.
+  const html=page.replace(/<script\b[^>]*>[\s\S]*?<\/script\s*>/gi,"")
+                 .replace(/<style\b[^>]*>[\s\S]*?<\/style\s*>/gi,"")
+                 .replace(/<!--[\s\S]*?-->/g,"");
+  let ingredients=[
+    ...htmlListItems(html,"wprm-recipe-ingredient"),
+    ...htmlListItems(html,"tasty-recipes-ingredient"),
+    ...htmlListItems(html,"recipe-ingredient"),
+    ...htmlNamedItems(html,"span","recipeIngredient")
+  ];
+  let steps=[
+    ...htmlListItems(html,"wprm-recipe-instruction"),
+    ...htmlNamedItems(html,"div","wprm-recipe-instruction-text"),
+    ...htmlNamedItems(html,"p","wprm-recipe-instruction-text"),
+    ...htmlListItems(html,"recipe-instruction"),
+    ...htmlListItems(html,"tasty-recipes-instruction"),
+    ...htmlNamedItems(html,"span","recipeInstructions")
+  ];
+  if(!ingredients.length){
+    const part=section(html,"zutaten|ingredients|was du brauchst|du brauchst");
+    ingredients=bodyList(part);
+  }
+  if(!steps.length){
+    const part=section(html,"zubereitung|zubereitungsschritte|anleitung|zubereiten|so geht.s|zubereitung und tipps|instructions|directions|method|so wird.s gemacht");
+    steps=bodyList(part);
+    if(!steps.length)steps=bodyParagraphs(part);
+  }
+  const normalize=(raw:string[],max:number)=>[...new Set(raw.map(x=>x.replace(/^\d{1,2}[\.)]\s*/,"").trim()))].filter(x=>x.length>3).slice(0,max);
+  ingredients=normalize(ingredients,85).filter(x=>x.length<250);
+  steps=normalize(steps,50).filter(x=>x.length>15);
+  if(!steps.length||(!ingredients.length&&steps.join(" ").length<120))return null;
+  const name=plain(html.match(/<h1\b[^>]*>([\s\S]*?)<\/h1\s*>/i)?.[1]??"").slice(0,120);
+  const headline=name.replace(/\s*[-|]\s*(chefkoch|rezept|lecker)\s*$/i,"");
+  return {
+    title:headline,
+    description:"",
+    steps,
+    ingredients,
+    portions:null,
+    unitLabel:"Portionen",
+    time:null,
+    sourceStatus:"aus-html-ansicht",
+    importNote:"Die Seite bietet keine vollständigen strukturierten Rezeptdaten. Bitte Zutaten, Arbeitsschritte und vor allem die Portionszahl besonders sorgfältig prüfen."
+  };
+}
+
 // Waldi presents this specific dough recipe as article blocks, not reliably as Recipe JSON-LD.
 // Source verified from the original article on 2026-11-22. Preserve its original quantities
 // and the chronology; express its instructions briefly in our own words.
@@ -201,12 +309,18 @@ Deno.serve(async(req:Request)=>{
       if(supportedWaldi)return reply({source:source.toString(),...supportedWaldi,canImport:true,importNote:"Die Website war für den automatischen Abruf nicht erreichbar. Es wird eine anhand der Originalseite geprüfte Kurzfassung vom 22.11.2026 angezeigt."},200);
       throw ex;
     }
-    const recipe=parseStructured(markup);
-    if(recipe&&Array.isArray(recipe.steps)&&recipe.steps.length
-       &&(!supportedWaldi||(recipe.steps.length>=7 && /pizzateig/i.test(String(recipe.title)))))
-      return reply({source:source.toString(),...recipe,canImport:true},200);
-    if(supportedWaldi)return reply({source:source.toString(),...supportedWaldi,canImport:true},200);
-    return reply({error:"Die Originalseite liefert keine auslesbaren Zubereitungsschritte. Bitte Original öffnen und die Schritte manuell übernehmen.",canImport:false},422);
+    const structured=parseStructured(markup);
+    const visible=(!structured||!Array.isArray(structured.steps)||!structured.steps.length||!Array.isArray(structured.ingredients)||!structured.ingredients.length)?parseHtmlFallback(markup):null;
+    if(supportedWaldi && (!structured||!Array.isArray(structured.steps)||structured.steps.length<7))
+      return reply({source:source.toString(),...supportedWaldi,canImport:true},200);
+    const merged=(structured&&Array.isArray(structured.steps)&&structured.steps.length)?{
+      ...structured,
+      ingredients:(Array.isArray(structured.ingredients)&&structured.ingredients.length)?structured.ingredients:(visible?.ingredients??[]),
+      importNote:(visible?.ingredients?.length&&!structured.ingredients?.length)?"Zutaten wurden aus der HTML-Rezeptkarte ergänzt. Bitte die Angaben vor dem Speichern prüfen.":undefined
+    }:visible;
+    if(merged&&Array.isArray(merged.steps)&&merged.steps.length)
+      return reply({source:source.toString(),...merged,canImport:true},200);
+    return reply({error:"Auf dieser Seite wurden keine verlässlichen Zubereitungsschritte gefunden. Öffne das Original und kopiere den Rezepttext unter „Text & Link“, oder fotografiere das Rezept.",canImport:false},422);
   }catch(ex){
     const reason=ex instanceof Error?ex.message:"Die Rezeptseite konnte nicht ausgelesen werden.";
     const code=/ungültig|unterstützt|direkten|Link/.test(reason)?400:502;
