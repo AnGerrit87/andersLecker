@@ -82,3 +82,13 @@ Erstellt als erster gemeinsamer App-Prototyp – mit Liebe zum Kochen. 💗
 - Diese Export-Rezeptvorschau ist **über ihre URL öffentlich erreichbar**, weil Bring!-Server sie ohne Anmeldung lesen müssen. Keine Fotos, Kontodaten, private Notizen oder Geheimnisse mitsenden.
 - Es werden **keine** Cloud-Zugangsdaten benötigt und keine privaten Familien-Datenbanktabellen gelesen oder verändert. Der Export-Link enthält die Daten selbst (Base64URL-kodiert, nicht verschlüsselt) und wird im Backend nicht persistent gespeichert.
 - Fallback bei Import-Problemen: **Zutaten kopieren**.
+
+## 📖 Zubereitung von der Originalseite importieren
+
+- Im Menü **Rezept hinzufügen → Text & Link** nur den Link einfügen und auf **Rezept aus Link lesen / Text prüfen** tippen. Die App ruft über die Supabase Edge Function `recipe-import` die strukturierten `schema.org/Recipe`-Felder `recipeInstructions` und `recipeIngredient` ab.
+- Unterstützte Domains (best effort): **chefkoch.de**, **einfachkochen.de** und **blueberryvegan.com**. Manche Seiten blockieren das automatische Auslesen oder bieten keine strukturierten Schritte; dann erfolgt eine verständliche Fehlermeldung. **Nur Link merken** ist der Fallback.
+- Bei vorhandenen Rezepten mit Quellen-Link erscheint **Zubereitung von Originalseite einlesen**. Die App zeigt die ausgelesenen Schritte in einer Vorschau.
+- Bei bestehenden Rezepten werden standardmäßig **nur die Zubereitungsschritte** ersetzt. Zutaten können optional neu übernommen werden. Der Titel, eigene Fotos, Sterne und Favoriten werden nicht automatisch überschrieben.
+- Ein übernommener Entwurf muss im Bearbeitungsformular **explizit gespeichert** werden.
+- Es werden **keine** Fotos der Quellseiten oder privaten Daten an den Lesedienst übertragen. Der Lesedienst lädt lediglich den eingegebenen HTTPS-Rezeptlink und nutzt keine private Supabase-Datenbank.
+- Die Funktion läuft derzeit ohne Familien-Login und speichert die importierten Texte weiterhin nur lokal im verwendeten Browser.
