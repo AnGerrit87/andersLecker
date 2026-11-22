@@ -7,8 +7,8 @@ Eine gemütliche, pastellfarbene Koch-App, die die Lieblingsrezepte aus verschie
 ## ✅ Stand des Prototyps
 
 - 36 importierte Rezeptkarten mit Originalquellen + unser Subway-Style-Cookie-Familienrezept
-- Bei 19 Rezepten: Zutaten, Kurz-Anleitung und Portionsrechner
-- 18 weitere Rezepte: Rezeptkarte mit Link zur Originalquelle
+- Bei allen 37 Rezepten: Zutaten, kurze selbstformulierte Anleitung und Portionsrechner
+- Original-Links als Quellen für importierte Rezepte
 - Rezeptsuche, Kategorien und Favoriten
 - Eigene Rezepte manuell oder aus eingefügtem Rezepttext erstellen
 - Rezeptfotos mit OCR/Texterkennung auslesen (Erkennung bitte prüfen)
@@ -42,7 +42,7 @@ Die Seite wird dadurch öffentlich sichtbar. GitHub Pages ist **keine private Fa
 - Persönliche Änderungen werden **lokal pro Browser** im `localStorage` gespeichert; noch keine Synchronisierung zwischen Geräten.
 - Vor einem Browser-Reset ein **JSON-Backup** exportieren.
 - `data/rezepte.json` dokumentiert den importierten Ausgangsbestand; aktuell lädt die App die Beispielrezepte noch direkt aus `index.html`.
-- Die Rezepterkennung benötigt ggf. Internet und muss von Hand geprüft werden. Chefkoch-Links werden noch nicht vollautomatisch als Zutatenlisten ausgelesen.
+- Die Rezepterkennung benötigt ggf. Internet und muss von Hand geprüft werden. Neue Chefkoch-Links werden noch nicht vollautomatisch als Zutatenlisten ausgelesen; die 36 bestehenden importierten Rezepte wurden manuell abgeglichen.
 - Die Original-Rezeptseiten bleiben mit ihren Links als Quelle hinterlegt.
 
 ## 🛠️ Nächste Ausbauschritte
