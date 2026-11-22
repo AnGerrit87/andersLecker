@@ -175,9 +175,9 @@ function bodyList(sectionHtml:string):string[]{
 }
 function bodyParagraphs(sectionHtml:string):string[]{
  const found:string[]=[];
- const paras=/<(?:p|div)\b[^>]*>([\s\S]*?)<\/(?:p|div)\s*>/gi;let m:RegExpExecArray|null;
+ const paras=/<(p|div)\b[^>]*>([\s\S]*?)<\/\1\s*>/gi;let m:RegExpExecArray|null;
  while((m=paras.exec(sectionHtml))!==null){
-   const val=plain(m[1]);if(val.length>22&&val.length<1600)found.push(val);
+   const val=plain(m[2]);if(val.length>22&&val.length<1600)found.push(val);
    if(found.length>=55)break;
  }
  return found;
@@ -275,6 +275,8 @@ async function fetchHtml(first:URL):Promise<string>{
       current=trusted(new URL(loc,current).toString());
       continue;
     }
+    if(response.status===401||response.status===403)throw Error("Die Website blockiert den automatischen Abruf (HTTP "+response.status+"). Bitte den Rezepttext kopieren oder ein Foto verwenden.");
+    if(response.status===429)throw Error("Die Website begrenzt automatische Abfragen (HTTP 429). Bitte später erneut versuchen oder den Rezepttext einfügen.");
     if(!response.ok)throw Error("Die Originalseite antwortet mit HTTP "+response.status+".");
     const type=response.headers.get("content-type")||"";
     if(!/text\/html|application\/xhtml/i.test(type))throw Error("Der Link führt nicht auf eine Rezept-Webseite.");
