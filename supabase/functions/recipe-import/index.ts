@@ -1,5 +1,10 @@
 // Parse structured recipes from trusted public sources. No logins, private tables or photo storage.
-const allowedHosts=new Set(["chefkoch.de","www.chefkoch.de","einfachkochen.de","www.einfachkochen.de","blueberryvegan.com","www.blueberryvegan.com","waldispizza.de","www.waldispizza.de"]);
+const allowedDomains=new Set(["chefkoch.de","lecker.de","essen-und-trinken.de","kochbar.de","kitchenstories.com","einfachkochen.de","einfachbacken.de","eatsmarter.de","daskochrezept.de","gutekueche.de","gutekueche.at","gutekueche.ch","ichkoche.at","rezeptwelt.de","kuechengoetter.de","eat.de","foodboom.de","eatbetter.de","brigitte.de","wunderweib.de","rewe.de","edeka.de","lidl-kochen.de","lidl.de","aldi-sued.de","aldi-nord.de","tegut.com","kaufland.de","penny.de","fooby.ch","bettybossi.ch","swissmilk.ch","migusto.migros.ch","migros.ch","gaumenfreundin.de","emmikochteinfach.de","familienkost.de","backenmachtgluecklich.de","sallys-blog.de","sallys-welt.de","sallys.de","zuckerjagdwurst.com","blueberryvegan.com","waldispizza.de","biancazapatka.com","veganheaven.de","eat-this.org","veggies.de","foodwithlove.de","sweetsandlifestyle.com","zimtkeksundapfeltarte.com","springlane.de","einfachmalene.de","herrgruenkocht.de","herzelieb.de","malteskitchen.de","foodwerk.ch","rezepte-glutenfrei.de","backenmitchristina.at","kochenundkueche.com","cuisine.at","waseigenes.com","was-eigenes.com","bbcgoodfood.com","goodfood.com","allrecipes.com","seriouseats.com","budgetbytes.com","delish.com","thekitchn.com","foodnetwork.com","tasty.co","recipetineats.com","simplyrecipes.com","justonecookbook.com","minimalistbaker.com","inspiredtaste.net","loveandlemons.com","smittenkitchen.com","cookieandkate.com","joyfoodsunshine.com","thepioneerwoman.com","food.com","epicurious.com","bonappetit.com","jamieoliver.com","greatbritishchefs.com","allrecipes.co.uk","allrecipes.de","bbc.co.uk","yummly.com","thermomix.com","thermomix.de"]);
+// Allow the primary domain and its recipe/blog/mobile subdomains, never arbitrary targets.
+function allowedHost(host:string):boolean {
+ const name=host.toLowerCase().replace(/\.$/,"");
+ return [...allowedDomains].some(domain=>name===domain||name==="www."+domain||name==="m."+domain||name==="amp."+domain||name==="rezepte."+domain||name==="recipes."+domain||name==="blog."+domain);
+}
 const headers={
   "Content-Type":"application/json; charset=utf-8",
   "Access-Control-Allow-Origin":"https://angerrit87.github.io",
@@ -13,8 +18,8 @@ const reply=(data:unknown,status=200)=>new Response(JSON.stringify(data),{status
 function trusted(value:string):URL{
   if(value.length>1600)throw Error("Der Rezeptlink ist zu lang.");
   let url:URL;try{url=new URL(value)}catch{throw Error("Bitte einen gültigen Rezeptlink eingeben.")}
-  if(url.protocol!=="https:"||url.port||url.username||url.password||!allowedHosts.has(url.hostname.toLowerCase()))
-    throw Error("Diese Rezeptseite wird noch nicht unterstützt (Chefkoch, Einfach Kochen, Blueberry Vegan oder Waldis Pizza).");
+  if(url.protocol!=="https:"||url.port||url.username||url.password||!allowedHost(url.hostname))
+    throw Error("Diese Rezeptwebsite ist noch nicht in der Liste unterstützter Anbieter. Bitte den Link melden oder Rezepttext einfügen.");
   if(url.pathname.length>950||url.pathname==="/")throw Error("Bitte einen direkten Rezeptlink angeben.");
   url.hash="";
   return url;
