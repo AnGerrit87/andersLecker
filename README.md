@@ -54,3 +54,13 @@ Die Seite wird dadurch öffentlich sichtbar. GitHub Pages ist **keine private Fa
 5. Wochenplanung und smarte gemeinsame Einkaufsliste
 
 Erstellt als erster gemeinsamer App-Prototyp – mit Liebe zum Kochen. 💗
+
+## 🖼️ Eigene Fotos, ⭐ Bewertungen und Rezeptgrößen
+
+- Jedes Rezept ist in der Sammlung alphabetisch nach seinem Titel sortiert (A–Z, deutsche Sortierung).
+- Im geöffneten Rezept: **Umbenennen** ändert nur den Titel und erhält alle Zutaten, Favoriten und Notizen.
+- Ein eigenes Gerichtsfoto kann direkt am Rezept hinzugefügt, ausgetauscht oder gelöscht werden.
+- Rezepte haben **1–5 Sterne** als persönliche Bewertung; die Herz-Favoriten bleiben separat.
+- Die gewünschte Anzahl an Cookies, Klößen oder Portionen wird direkt als Zahl eingetippt, z. B. **80 → 40 Cookies**.
+- Fotos, Sterne, Umbenennungen und andere Änderungen werden **nur in diesem Browser** gespeichert. Bitte regelmäßige JSON-Backups anlegen. Eine zentrale Familien-Datenbank und ein Fotospeicher stehen noch aus.
+- Bilder werden für die lokale Speicherung verkleinert. Für eine große Bildsammlung empfiehlt sich später gemeinsamer Cloud-Speicher.
