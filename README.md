@@ -64,3 +64,11 @@ Erstellt als erster gemeinsamer App-Prototyp – mit Liebe zum Kochen. 💗
 - Die gewünschte Anzahl an Cookies, Klößen oder Portionen wird direkt als Zahl eingetippt, z. B. **80 → 40 Cookies**.
 - Fotos, Sterne, Umbenennungen und andere Änderungen werden **nur in diesem Browser** gespeichert. Bitte regelmäßige JSON-Backups anlegen. Eine zentrale Familien-Datenbank und ein Fotospeicher stehen noch aus.
 - Bilder werden für die lokale Speicherung verkleinert. Für eine große Bildsammlung empfiehlt sich später gemeinsamer Cloud-Speicher.
+
+## 🛒 Bring! Einkaufsliste – Zwischenstand
+
+- Die Schaltfläche **Zutaten kopieren** berücksichtigt die im Rezept eingetragene Wunschmenge (z. B. 40 statt 80 Cookies).
+- Bei importierten Rezepten mit Quellenlink führt **Bring! (Originalmengen)** zur Bring!-Importfunktion für die Originalseite. Die Originalseite muss von Bring! unterstützt werden.
+- **Achtung:** Ein Import über den Original-Link übernimmt NICHT die geänderte Portionsmenge und auch keine nachträglichen Änderungen in Anders lecker! Auf Wunschmenge umgerechnete Zutaten lassen sich bereits kopieren.
+- Die direkte Übernahme beliebig skalierter Zutaten in Bring! benötigt eine öffentlich erreichbare, kurzfristige schema.org-Rezeptseite, die von einem Backend erzeugt wird. Die Familien-Datenbank bleibt dabei geschützt.
+- GitHub Pages allein kann eine solche temporäre Seite aus lokal im Browser gespeicherten Rezepten nicht für Bring! bereitstellen. Bring!-Zugangsdaten oder inoffizielle Listen-Schreib-APIs sind für den vorgesehenen Rezeptimport nicht notwendig.
