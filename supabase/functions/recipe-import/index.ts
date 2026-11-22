@@ -35,37 +35,58 @@ function plain(input:unknown):string{
   return htmlDecode(String(input??"").replace(/<br\s*\/?>/gi,"\n").replace(/<\/(?:p|li|div|section|h[1-6])>/gi,"\n").replace(/<[^>]*>/g,"").replace(/\s+/g," ").trim());
 }
 function recipeNodes(node:unknown,depth=0):Record<string,unknown>[]{
-  if(depth>7||!node||typeof node!=="object")return [];
-  if(Array.isArray(node))return node.flatMap(x=>recipeNodes(x,depth+1));
+  if(depth>10||node===null||typeof node!=="object")return [];
+  if(Array.isArray(node))return node.slice(0,50).flatMap(x=>recipeNodes(x,depth+1));
   const r=node as Record<string,unknown>;
   const types=Array.isArray(r["@type"])?r["@type"]:[r["@type"]];
-  const me=types.some(t=>typeof t==="string"&&/(^|[/#])Recipe$/i.test(t))?[r]:[];
-  return [...me,...(r["@graph"]?recipeNodes(r["@graph"],depth+1):[]),...(r.mainEntity?recipeNodes(r.mainEntity,depth+1):[]),...(r.itemListElement?recipeNodes(r.itemListElement,depth+1):[])];
+  const isRecipe=types.some(t=>typeof t==="string"&&/(^|[/#])Recipe$/i.test(t));
+  const me=isRecipe?[r]:[];
+  // Search any nested JSON-LD graph / @graph / mainEntity regardless of publisher structure.
+  if(isRecipe)return me;
+  const children=["@graph","mainEntity","mainEntityOfPage","about","itemListElement","hasPart","subjectOf"];
+  return [...me,...children.flatMap(key=>key in r?recipeNodes(r[key],depth+1):[])];
 }
 function instructionSteps(value:unknown,depth=0):string[]{
-  if(depth>6||value==null)return [];
+  if(depth>8||value===null||value===undefined)return [];
   if(typeof value==="string"){
-    return value.split(/\n\s*\n+|(?<=\.)\s*(?=\d{1,2}[.)]\s)/).map(plain).filter(x=>x.length>3);
+    // Some sites provide a single string with multiple numbered lines.
+    const raw=value.replace(/<br\s*\/?>/gi,"\n").replace(/<\/(?:p|li|div)>/gi,"\n");
+    const steps=raw.split(/\n\s*\n+|\n\s*(?=\d{1,2}[\.)]\s)/);
+    return steps.map(plain).filter(x=>x.length>3).slice(0,50);
   }
-  if(Array.isArray(value))return value.flatMap(x=>instructionSteps(x,depth+1));
+  if(Array.isArray(value))return value.slice(0,80).flatMap(v=>instructionSteps(v,depth+1)).slice(0,50);
   if(typeof value!=="object")return [];
-  const obj=value as Record<string,unknown>;
-  if(Array.isArray(obj.itemListElement))return instructionSteps(obj.itemListElement,depth+1);
-  if(obj["@type"]==="HowToSection"&&obj.itemListElement)return instructionSteps(obj.itemListElement,depth+1);
-  if(typeof obj.text==="string")return [plain(obj.text)].filter(x=>x.length>3);
-  if(typeof obj.description==="string")return [plain(obj.description)].filter(x=>x.length>3);
-  if(typeof obj.name==="string"&&obj.name.length>12)return [plain(obj.name)];
+  const x=value as Record<string,unknown>;
+  if(x.itemListElement)return instructionSteps(x.itemListElement,depth+1);
+  if(x.steps)return instructionSteps(x.steps,depth+1);
+  if(x.recipeInstructions)return instructionSteps(x.recipeInstructions,depth+1);
+  if(typeof x.text==="string")return [plain(x.text)].filter(x=>x.length>3);
+  if(typeof x.description==="string")return [plain(x.description)].filter(x=>x.length>3);
+  if(typeof x.name==="string"&&x.name.length>10)return [plain(x.name)];
   return [];
+}
+function ingredientString(raw:unknown):string {
+  if(typeof raw==="string"||typeof raw==="number")return plain(raw);
+  if(!raw||typeof raw!=="object")return "";
+  const obj=raw as Record<string,unknown>;
+  const num=obj.value??obj.amount??"";
+  const unit=obj.unitText??obj.unitCode??"";
+  const name=obj.name??obj.text??obj.description??"";
+  if(num&&!name)return plain(num);
+  return plain((num?String(num)+" ":"")+(unit?String(unit)+" ":"")+String(name));
+}
+function extractIngredients(raw:unknown):string[]{
+ const arr=Array.isArray(raw)?raw:typeof raw==="string"?raw.split(/\n/):[];
+ return arr.map(ingredientString).map(s=>s.trim()).filter(s=>s.length>1&&s.length<300).slice(0,85);
 }
 function numberYield(raw:unknown):{portions:number|null;unitLabel:string}{
   const value=Array.isArray(raw)?raw[0]:raw;
-  const txt=typeof value==="number"?String(value):typeof value==="string"?value.trim():"";
-  const match=txt.match(/(\d{1,5})(?:[.,]\d+)?/);
-  const portions=match?Number(match[1]):null;
-  let unitLabel="Portionen";
-  if(/\b(stück|kekse|cookies|plätzchen|waffeln|cake.pops|knödel|klöße)\b/i.test(txt))unitLabel=txt.replace(/^\d+(?:[.,]\d+)?\s*/,"").trim().slice(0,28)||"Stück";
-  else if(/\b(personen|personenanzahl)\b/i.test(txt))unitLabel="Portionen";
-  return {portions:portions&&portions<=10000?portions:null,unitLabel};
+  const obj=value&&typeof value==="object"?value as Record<string,unknown>:null;
+  const txt=(obj?String(obj.value??"")+" "+String(obj.unitText??""):String(value??"")).trim();
+  const match=txt.match(/(\d{1,5})(?:[.,]\d+)?/),n=match?Number(match[1]):null;
+  const units=txt.replace(/^\d+(?:[.,]\d+)?\s*/,"").trim();
+  const isCount=/(stück|cookies|kekse|plätzchen|waffeln|pizza|pizzen|knödel|klöße|muffins|brote|brötchen|pancakes)/i.test(units);
+  return {portions:n&&n<=10000?n:null,unitLabel:isCount?(units.slice(0,32)||"Stück"):"Portionen"};
 }
 function minutes(value:unknown):number|null{
   if(typeof value!=="string")return null;
@@ -76,20 +97,31 @@ function minutes(value:unknown):number|null{
 }
 function parseStructured(markup:string):Record<string,unknown>|null{
   const script=/<script\b([^>]*)>([\s\S]*?)<\/script\s*>/gi;
-  let match:RegExpExecArray|null;const nodes:Record<string,unknown>[]=[];
-  while((match=script.exec(markup))!==null){
-    if(!/\btype\s*=\s*["']?\s*application\/ld\+json\b/i.test(match[1]))continue;
-    try{nodes.push(...recipeNodes(JSON.parse(match[2].trim().replace(/^\uFEFF/,""))))}catch{/* Malformed non-recipe JSON-LD is skipped. */}
+  let m:RegExpExecArray|null;
+  const nodes:Record<string,unknown>[]=[];
+  while((m=script.exec(markup))!==null){
+    if(!/\btype\s*=\s*["']?\s*application\/ld\+json\b/i.test(m[1]))continue;
+    let raw=m[2].trim().replace(/^\uFEFF/,"").replace(/^<!--\s*/,"").replace(/\s*-->$/,"");
+    try{nodes.push(...recipeNodes(JSON.parse(raw)))}
+    catch{
+      // Some CMS platforms HTML-escape the whole JSON-LD payload.
+      try{nodes.push(...recipeNodes(JSON.parse(htmlDecode(raw))))}catch{/* bad markup */}
+    }
+    if(nodes.length>80)break;
   }
-  const recipe=nodes.find(x=>instructionSteps(x.recipeInstructions).length>0)??nodes[0];
-  if(!recipe)return null;
-  const steps=instructionSteps(recipe.recipeInstructions).map(x=>x.replace(/^\d{1,2}\s*[.)]\s*/,"").trim()).filter(Boolean).slice(0,50);
-  const ingredients=Array.isArray(recipe.recipeIngredient)?recipe.recipeIngredient.map(x=>typeof x==="string"?plain(x):x&&typeof x==="object"?plain((x as Record<string,unknown>).name??(x as Record<string,unknown>).text):"").filter(Boolean).slice(0,85):[];
-  const yieldInfo=numberYield(recipe.recipeYield);
-  const time=minutes(recipe.totalTime)??(minutes(recipe.prepTime)&&minutes(recipe.cookTime)?(minutes(recipe.prepTime)||0)+(minutes(recipe.cookTime)||0):minutes(recipe.prepTime)??minutes(recipe.cookTime));
-  return {title:plain(recipe.name).slice(0,120),description:plain(recipe.description).slice(0,320),steps,ingredients,portions:yieldInfo.portions,unitLabel:yieldInfo.unitLabel,time,sourceStatus:"aus-originalseite"};
+  const candidate=nodes.map(recipe=>{
+    const steps=instructionSteps(recipe.recipeInstructions).map(x=>x.replace(/^\d{1,2}\s*[\.)]\s*/,"").trim()).filter(Boolean).slice(0,50);
+    const ingredients=extractIngredients(recipe.recipeIngredient??recipe.ingredients);
+    return {recipe,steps,ingredients,score:(steps.length?20:0)+(ingredients.length?10:0)+Math.min(steps.length,8)+Math.min(ingredients.length,12)+(recipe.recipeYield?2:0)};
+  }).sort((a,b)=>b.score-a.score)[0];
+  if(!candidate)return null;
+  const {recipe,steps,ingredients}=candidate;
+  const yieldInfo=numberYield(recipe.recipeYield??recipe.yield);
+  const prep=minutes(recipe.prepTime),cook=minutes(recipe.cookTime);
+  const time=minutes(recipe.totalTime)??(prep!==null&&cook!==null?Math.min(1440,prep+cook):prep??cook);
+  const title=plain(recipe.name).slice(0,120);
+  return {title,description:plain(recipe.description).slice(0,320),steps,ingredients,portions:yieldInfo.portions,unitLabel:yieldInfo.unitLabel,time,sourceStatus:"aus-originalseite"};
 }
-
 // Waldi presents this specific dough recipe as article blocks, not reliably as Recipe JSON-LD.
 // Source verified from the original article on 2026-11-22. Preserve its original quantities
 // and the chronology; express its instructions briefly in our own words.
