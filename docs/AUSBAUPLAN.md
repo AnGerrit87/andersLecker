@@ -69,3 +69,5 @@ Bring! importiert von einer öffentlich erreichbaren Rezeptseite, die von ihren 
 - **Wichtig:** Die Web-App nutzt derzeit weiter den lokalen Browser-Speicher. Die Cloud-Funktionen sind auf Datenbank-Seite vorbereitet, aber Benutzeranmeldung, Cloud-Migration, synchronisierte Bildverwaltung und Familien-Einladung sind noch nicht mit dem Frontend verbunden.
 - Ein Familienkonto ist noch nicht angelegt, weil dafür zuerst eine authentifizierte Anmeldung nötig ist.
 - Keine privaten Zugangsdaten ins Repository committen. Nur publishable Keys dürfen später für den Browser eingesetzt werden.
+
+- [x] Waldis Pizza (Pizzateig): Quellenfreigabe, geprüfte Kurzfassung als Fallback, 10 Schritte und skalierbare Hefemengen-Spanne (22.11.2026)
