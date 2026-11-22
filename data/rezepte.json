@@ -1,0 +1,1650 @@
+[
+  {
+    "id": "anders-import-01",
+    "title": "Zwiebelkuchen",
+    "description": "Deftiger Zwiebelkuchen für die ganze Familie.",
+    "category": "Hauptgerichte",
+    "time": 65,
+    "portions": 6,
+    "emoji": "🧅",
+    "color": "#fae5dd",
+    "image": "",
+    "favorite": false,
+    "source": "https://www.chefkoch.de/rezepte/50051017420725/Zwiebelkuchen.html",
+    "ingredients": [
+      {
+        "amount": 200,
+        "unit": "g",
+        "name": "Magerquark"
+      },
+      {
+        "amount": 400,
+        "unit": "g",
+        "name": "Mehl"
+      },
+      {
+        "amount": 1,
+        "unit": "Stück",
+        "name": "Ei für den Teig"
+      },
+      {
+        "amount": 1,
+        "unit": "Prise",
+        "name": "Salz"
+      },
+      {
+        "amount": 8,
+        "unit": "EL",
+        "name": "Öl"
+      },
+      {
+        "amount": 6,
+        "unit": "EL",
+        "name": "Milch"
+      },
+      {
+        "amount": 1,
+        "unit": "Pck.",
+        "name": "Backpulver"
+      },
+      {
+        "amount": 7,
+        "unit": "Stück",
+        "name": "Zwiebeln"
+      },
+      {
+        "amount": 40,
+        "unit": "g",
+        "name": "Margarine"
+      },
+      {
+        "amount": 300,
+        "unit": "ml",
+        "name": "saure Sahne"
+      },
+      {
+        "amount": 300,
+        "unit": "g",
+        "name": "Joghurt"
+      },
+      {
+        "amount": 300,
+        "unit": "g",
+        "name": "Kochschinken"
+      },
+      {
+        "amount": 300,
+        "unit": "g",
+        "name": "Emmentaler"
+      },
+      {
+        "amount": 1,
+        "unit": "EL",
+        "name": "Speisestärke"
+      },
+      {
+        "amount": 3,
+        "unit": "Stück",
+        "name": "Eier für den Belag"
+      },
+      {
+        "amount": 0,
+        "unit": "",
+        "name": "Salz und Pfeffer"
+      }
+    ],
+    "steps": [
+      "Quark, Mehl, Ei, Öl, Milch, Backpulver und Salz zu einem weichen Teig verarbeiten und auf einem gefetteten Blech verteilen.",
+      "Zwiebeln in Ringe schneiden und in Margarine glasig dünsten. Kochschinken würfeln und Käse reiben.",
+      "Sahne, Joghurt, Eier und Stärke verrühren, mit Salz und Pfeffer würzen und mit Zwiebeln, Schinken und Käse auf dem Boden verteilen.",
+      "Auf dem Blech verteilen und bei 200 °C Ober-/Unterhitze ungefähr 20–25 Minuten backen."
+    ],
+    "sourceStatus": "geprüft",
+    "unitLabel": "Portionen"
+  },
+  {
+    "id": "anders-import-02",
+    "title": "Cremiger Nudelauflauf mit Tomaten und Mozzarella",
+    "description": "Nudelauflauf mit aromatischen Tomaten und Käse.",
+    "category": "Vegetarisch",
+    "time": 60,
+    "portions": 4,
+    "emoji": "🍝",
+    "color": "#e4f3e9",
+    "image": "",
+    "favorite": false,
+    "source": "https://www.chefkoch.de/rezepte/2352371374010722/Cremiger-Nudelauflauf-mit-Tomaten-und-Mozzarella.html",
+    "ingredients": [
+      {
+        "amount": 1,
+        "unit": "Stück",
+        "name": "Zwiebel"
+      },
+      {
+        "amount": 2,
+        "unit": "Zehen",
+        "name": "Knoblauch"
+      },
+      {
+        "amount": 1,
+        "unit": "Stück",
+        "name": "Chilischote"
+      },
+      {
+        "amount": 400,
+        "unit": "g",
+        "name": "Cherrytomaten"
+      },
+      {
+        "amount": 50,
+        "unit": "g",
+        "name": "Parmesan"
+      },
+      {
+        "amount": 125,
+        "unit": "g",
+        "name": "Mozzarella"
+      },
+      {
+        "amount": 1,
+        "unit": "Bund",
+        "name": "Basilikum"
+      },
+      {
+        "amount": 400,
+        "unit": "g",
+        "name": "Rigatoni oder Penne"
+      },
+      {
+        "amount": 0,
+        "unit": "",
+        "name": "Olivenöl"
+      },
+      {
+        "amount": 500,
+        "unit": "g",
+        "name": "passierte Tomaten"
+      },
+      {
+        "amount": 200,
+        "unit": "ml",
+        "name": "Sahne"
+      },
+      {
+        "amount": 0,
+        "unit": "",
+        "name": "Salz, Pfeffer und Zucker"
+      }
+    ],
+    "steps": [
+      "Nudeln bissfest kochen. Zwiebel, Knoblauch und Chili klein schneiden; Kirschtomaten halbieren.",
+      "Zwiebel, Knoblauch und Chili anschwitzen. Passierte Tomaten, Sahne und Parmesan zu einer cremigen Soße verrühren und würzen.",
+      "Nudeln und frische Tomaten mit der Soße in einer Form mischen, Mozzarella darauf verteilen und überbacken. Mit Basilikum servieren."
+    ],
+    "sourceStatus": "geprüft",
+    "unitLabel": "Portionen"
+  },
+  {
+    "id": "anders-import-03",
+    "title": "Geheimes Waffelrezept",
+    "description": "Lockere Waffeln für gemütliche Nachmittage.",
+    "category": "Frühstück",
+    "time": 55,
+    "portions": 30,
+    "emoji": "🧇",
+    "color": "#f7e9f3",
+    "image": "",
+    "favorite": false,
+    "source": "https://www.chefkoch.de/rezepte/662351168076093/Geheimes-Waffelrezept.html",
+    "ingredients": [
+      {
+        "amount": 10,
+        "unit": "Stück",
+        "name": "Eier"
+      },
+      {
+        "amount": 500,
+        "unit": "g",
+        "name": "Zucker"
+      },
+      {
+        "amount": 500,
+        "unit": "g",
+        "name": "Margarine"
+      },
+      {
+        "amount": 2,
+        "unit": "Pck.",
+        "name": "Vanillinzucker"
+      },
+      {
+        "amount": 1,
+        "unit": "Schuss",
+        "name": "Rum (optional)"
+      },
+      {
+        "amount": 1000,
+        "unit": "g",
+        "name": "Mehl"
+      },
+      {
+        "amount": 1,
+        "unit": "Pck.",
+        "name": "Backpulver"
+      },
+      {
+        "amount": 1000,
+        "unit": "ml",
+        "name": "Milch"
+      },
+      {
+        "amount": 0,
+        "unit": "",
+        "name": "Fett für das Waffeleisen"
+      }
+    ],
+    "steps": [
+      "Eier mit Zucker und Margarine schaumig rühren. Vanillezucker und nach Wunsch Rum zugeben.",
+      "Mehl und Backpulver einrühren; Milch nach und nach hinzufügen, bis ein glatter Waffelteig entsteht.",
+      "Portionsweise in einem vorgeheizten Waffeleisen goldbraun ausbacken."
+    ],
+    "sourceStatus": "geprüft",
+    "unitLabel": "Waffeln",
+    "note": "Chefkoch gibt die gesamte Teigmenge als 1 Portion an; hier auf ca. 30 Waffeln umgestellt."
+  },
+  {
+    "id": "anders-import-04",
+    "title": "Vegetarische Spinat-Gemüse-Lasagne mit Tomatensoße",
+    "description": "Ofenlasagne mit Spinat, Gemüse und Tomatensoße.",
+    "category": "Vegetarisch",
+    "time": null,
+    "portions": null,
+    "emoji": "🥬",
+    "color": "#fff0d4",
+    "image": "",
+    "favorite": false,
+    "source": "https://www.chefkoch.de/rezepte/2114131340630587/Vegetarische-Spinat-Gemuese-Lasagne-mit-Tomatensosse.html",
+    "ingredients": [],
+    "steps": [],
+    "sourceStatus": "link",
+    "unitLabel": "Portionen"
+  },
+  {
+    "id": "anders-import-05",
+    "title": "Omas Zimtsterne",
+    "description": "Der Klassiker zur Adventszeit.",
+    "category": "Weihnachtsbäckerei",
+    "time": null,
+    "portions": null,
+    "emoji": "⭐",
+    "color": "#e9e3f8",
+    "image": "",
+    "favorite": false,
+    "source": "https://www.chefkoch.de/rezepte/570771155723405/Omas-Zimtsterne.html",
+    "ingredients": [],
+    "steps": [],
+    "sourceStatus": "link",
+    "unitLabel": "Portionen"
+  },
+  {
+    "id": "anders-import-06",
+    "title": "Vanille Cake Pops",
+    "description": "Kleine Kuchen am Stiel mit Vanille.",
+    "category": "Backen & Süßes",
+    "time": null,
+    "portions": null,
+    "emoji": "🍭",
+    "color": "#fbe7e9",
+    "image": "",
+    "favorite": false,
+    "source": "https://www.chefkoch.de/rezepte/1996921323358725/Vanille-Cake-Pops.html",
+    "ingredients": [],
+    "steps": [],
+    "sourceStatus": "link",
+    "unitLabel": "Portionen"
+  },
+  {
+    "id": "anders-import-07",
+    "title": "Penne mit Zucchini, Pinienkernen und Parmesan",
+    "description": "Sommerliche Pasta mit gerösteten Pinienkernen.",
+    "category": "Vegetarisch",
+    "time": 15,
+    "portions": 2,
+    "emoji": "🍝",
+    "color": "#fae5dd",
+    "image": "",
+    "favorite": false,
+    "source": "https://www.chefkoch.de/rezepte/1227841227947517/Penne-mit-Zucchini-Pinienkernen-und-Parmesan.html",
+    "ingredients": [
+      {
+        "amount": 250,
+        "unit": "g",
+        "name": "Penne"
+      },
+      {
+        "amount": 3,
+        "unit": "EL",
+        "name": "Pinienkerne"
+      },
+      {
+        "amount": 400,
+        "unit": "g",
+        "name": "Zucchini"
+      },
+      {
+        "amount": 1,
+        "unit": "Stück",
+        "name": "kleine Zwiebel"
+      },
+      {
+        "amount": 4,
+        "unit": "Zehen",
+        "name": "Knoblauch"
+      },
+      {
+        "amount": 75,
+        "unit": "g",
+        "name": "Parmesan"
+      },
+      {
+        "amount": 5,
+        "unit": "EL",
+        "name": "roter Balsamico"
+      },
+      {
+        "amount": 4,
+        "unit": "EL",
+        "name": "Olivenöl"
+      },
+      {
+        "amount": 0,
+        "unit": "",
+        "name": "Salz und Pfeffer"
+      }
+    ],
+    "steps": [
+      "Pinienkerne in einer trockenen Pfanne rösten und beiseitestellen.",
+      "Zucchini, Zwiebel und Knoblauch klein schneiden und in Olivenöl anbraten. Balsamico dazugeben und kurz einkochen lassen.",
+      "Penne kochen und mit dem Gemüse, Pinienkernen und Parmesan mischen. Abschmecken und servieren."
+    ],
+    "sourceStatus": "geprüft",
+    "unitLabel": "Portionen"
+  },
+  {
+    "id": "anders-import-08",
+    "title": "Schweinefilet auf Süßkartoffelpüree mit Lebkuchenjus und Rosenkohl",
+    "description": "Ein besonderes Essen für festliche Tage.",
+    "category": "Hauptgerichte",
+    "time": null,
+    "portions": null,
+    "emoji": "🍖",
+    "color": "#e4f3e9",
+    "image": "",
+    "favorite": false,
+    "source": "https://www.chefkoch.de/rezepte/1417941246631682/Schweinefilet-auf-Suesskartoffelpueree-mit-Lebkuchenjus-und-Rosenkohl.html",
+    "ingredients": [],
+    "steps": [],
+    "sourceStatus": "link",
+    "unitLabel": "Portionen"
+  },
+  {
+    "id": "anders-import-09",
+    "title": "Kürbis-Risotto",
+    "description": "Cremiges Risotto mit Kürbis.",
+    "category": "Vegetarisch",
+    "time": 45,
+    "portions": 4,
+    "emoji": "🎃",
+    "color": "#f7e9f3",
+    "image": "",
+    "favorite": false,
+    "source": "https://www.chefkoch.de/rezepte/351681120497520/Kuerbis-Risotto.html",
+    "ingredients": [
+      {
+        "amount": 450,
+        "unit": "g",
+        "name": "Kürbisfleisch"
+      },
+      {
+        "amount": 1,
+        "unit": "Stück",
+        "name": "Schalotte"
+      },
+      {
+        "amount": 1,
+        "unit": "Zehe",
+        "name": "Knoblauch"
+      },
+      {
+        "amount": 2,
+        "unit": "EL",
+        "name": "Olivenöl"
+      },
+      {
+        "amount": 2,
+        "unit": "EL",
+        "name": "Butter"
+      },
+      {
+        "amount": 350,
+        "unit": "g",
+        "name": "Risottoreis"
+      },
+      {
+        "amount": 100,
+        "unit": "ml",
+        "name": "Weißwein"
+      },
+      {
+        "amount": 1000,
+        "unit": "ml",
+        "name": "heiße Gemüsebrühe"
+      },
+      {
+        "amount": 1,
+        "unit": "Bund",
+        "name": "Frühlingszwiebeln"
+      },
+      {
+        "amount": 3,
+        "unit": "EL",
+        "name": "Crème fraîche"
+      },
+      {
+        "amount": 50,
+        "unit": "g",
+        "name": "Parmesan"
+      },
+      {
+        "amount": 0,
+        "unit": "",
+        "name": "Pfeffer"
+      },
+      {
+        "amount": 0.5,
+        "unit": "Kästchen",
+        "name": "Kresse"
+      }
+    ],
+    "steps": [
+      "Kürbis in kleine Stücke schneiden, Schalotte und Knoblauch fein hacken.",
+      "Gemüse in Öl und Butter anschwitzen. Reis einrühren, mit Wein ablöschen und die heiße Brühe nach und nach zugeben.",
+      "Etwa 20 Minuten unter gelegentlichem Rühren garen. Frühlingszwiebeln, Crème fraîche und Parmesan einarbeiten; abschmecken und mit Kresse servieren."
+    ],
+    "sourceStatus": "geprüft",
+    "unitLabel": "Portionen"
+  },
+  {
+    "id": "anders-import-10",
+    "title": "KFC Coleslaw",
+    "description": "Cremiger Krautsalat zu Grillgerichten.",
+    "category": "Beilagen & Salate",
+    "time": 30,
+    "portions": 10,
+    "emoji": "🥗",
+    "color": "#fff0d4",
+    "image": "",
+    "favorite": false,
+    "source": "https://www.chefkoch.de/rezepte/3017351454519857/KFC-Coleslaw.html",
+    "ingredients": [
+      {
+        "amount": 800,
+        "unit": "g",
+        "name": "Weißkohl"
+      },
+      {
+        "amount": 1,
+        "unit": "Stück",
+        "name": "mittelgroße Karotte"
+      },
+      {
+        "amount": 1,
+        "unit": "Stück",
+        "name": "kleine Zwiebel"
+      },
+      {
+        "amount": 65,
+        "unit": "g",
+        "name": "Zucker"
+      },
+      {
+        "amount": 0.5,
+        "unit": "TL",
+        "name": "Salz"
+      },
+      {
+        "amount": 1,
+        "unit": "Prise",
+        "name": "Pfeffer"
+      },
+      {
+        "amount": 60,
+        "unit": "ml",
+        "name": "Milch"
+      },
+      {
+        "amount": 125,
+        "unit": "g",
+        "name": "Mayonnaise"
+      },
+      {
+        "amount": 60,
+        "unit": "ml",
+        "name": "Buttermilch"
+      },
+      {
+        "amount": 1.5,
+        "unit": "EL",
+        "name": "Weißweinessig"
+      },
+      {
+        "amount": 2.5,
+        "unit": "EL",
+        "name": "Zitronensaft"
+      },
+      {
+        "amount": 0.25,
+        "unit": "TL",
+        "name": "Paprikapulver"
+      },
+      {
+        "amount": 0.5,
+        "unit": "TL",
+        "name": "Senf (optional)"
+      }
+    ],
+    "steps": [
+      "Kohl, Karotte und Zwiebel sehr fein schneiden oder raspeln.",
+      "Dressing aus den übrigen Zutaten verrühren und unter das Gemüse heben.",
+      "Abgedeckt möglichst über Nacht im Kühlschrank durchziehen lassen."
+    ],
+    "sourceStatus": "geprüft",
+    "unitLabel": "Portionen",
+    "note": "Zusätzlich etwa 8–15 Stunden Kühlzeit einplanen."
+  },
+  {
+    "id": "anders-import-11",
+    "title": "Der perfekte Pfannkuchen",
+    "description": "Ein Pfannkuchen-Grundrezept für viele Gelegenheiten.",
+    "category": "Frühstück",
+    "time": 45,
+    "portions": 4,
+    "emoji": "🥞",
+    "color": "#e9e3f8",
+    "image": "",
+    "favorite": false,
+    "source": "https://www.chefkoch.de/rezepte/1208161226570428/Der-perfekte-Pfannkuchen-gelingt-einfach-immer.html",
+    "ingredients": [
+      {
+        "amount": 400,
+        "unit": "g",
+        "name": "Mehl"
+      },
+      {
+        "amount": 3,
+        "unit": "Stück",
+        "name": "große Eier"
+      },
+      {
+        "amount": 1,
+        "unit": "Prise",
+        "name": "Salz"
+      },
+      {
+        "amount": 750,
+        "unit": "ml",
+        "name": "Milch"
+      },
+      {
+        "amount": 30,
+        "unit": "ml",
+        "name": "Sprudelwasser"
+      },
+      {
+        "amount": 0,
+        "unit": "",
+        "name": "Butter zum Ausbacken"
+      }
+    ],
+    "steps": [
+      "Mehl, Eier, Milch und Salz zu einem klümpchenfreien Teig verrühren. Rund 30 Minuten ruhen lassen.",
+      "Mineralwasser kurz unterheben.",
+      "Etwas Butter in einer Pfanne erhitzen und den Teig nacheinander dünn ausbacken."
+    ],
+    "sourceStatus": "geprüft",
+    "unitLabel": "Portionen"
+  },
+  {
+    "id": "anders-import-12",
+    "title": "Surinas seidene Kartoffelklöße",
+    "description": "Weiche Klöße aus gekochten Kartoffeln.",
+    "category": "Beilagen & Salate",
+    "time": null,
+    "portions": null,
+    "emoji": "🥔",
+    "color": "#fbe7e9",
+    "image": "",
+    "favorite": false,
+    "source": "https://www.chefkoch.de/rezepte/473601141052125/Surina-s-seidene-Kartoffelkloesse-aus-gekochten-Kartoffeln.html",
+    "ingredients": [],
+    "steps": [],
+    "sourceStatus": "link",
+    "unitLabel": "Portionen"
+  },
+  {
+    "id": "anders-import-13",
+    "title": "Saftige Kokosmakronen",
+    "description": "Saftige Kokosmakronen mit Quark.",
+    "category": "Weihnachtsbäckerei",
+    "time": 37,
+    "portions": 65,
+    "emoji": "🥥",
+    "color": "#fae5dd",
+    "image": "",
+    "favorite": false,
+    "source": "https://www.chefkoch.de/rezepte/1513641256654130/Saftige-Kokosmakronen.html",
+    "ingredients": [
+      {
+        "amount": 4,
+        "unit": "Stück",
+        "name": "Eiweiß"
+      },
+      {
+        "amount": 1,
+        "unit": "Prise",
+        "name": "Salz"
+      },
+      {
+        "amount": 150,
+        "unit": "g",
+        "name": "Zucker"
+      },
+      {
+        "amount": 1,
+        "unit": "Pck.",
+        "name": "Vanillezucker"
+      },
+      {
+        "amount": 65,
+        "unit": "g",
+        "name": "Quark"
+      },
+      {
+        "amount": 4,
+        "unit": "Tropfen",
+        "name": "Bittermandelaroma"
+      },
+      {
+        "amount": 200,
+        "unit": "g",
+        "name": "Kokosraspeln"
+      },
+      {
+        "amount": 0,
+        "unit": "",
+        "name": "Backoblaten nach Bedarf"
+      }
+    ],
+    "steps": [
+      "Eiweiß mit Salz sehr steif aufschlagen und den Zucker nach und nach einrieseln lassen.",
+      "Quark, Aroma und Kokosraspeln vorsichtig unterheben. Kleine Häufchen auf Oblaten setzen.",
+      "Bei 175 °C Umluft etwa 10–12 Minuten backen."
+    ],
+    "sourceStatus": "geprüft",
+    "unitLabel": "Stück"
+  },
+  {
+    "id": "anders-import-14",
+    "title": "Toffifee-Kekse",
+    "description": "Kekse mit Toffifee.",
+    "category": "Weihnachtsbäckerei",
+    "time": null,
+    "portions": null,
+    "emoji": "🍪",
+    "color": "#e4f3e9",
+    "image": "",
+    "favorite": false,
+    "source": "https://www.chefkoch.de/rezepte/580921157018016/Toffifee-Kekse.html",
+    "ingredients": [],
+    "steps": [],
+    "sourceStatus": "link",
+    "unitLabel": "Portionen"
+  },
+  {
+    "id": "anders-import-15",
+    "title": "RRs unverwüstliche Ausstech-Plätzchen",
+    "description": "Ausstechteig für Plätzchen.",
+    "category": "Weihnachtsbäckerei",
+    "time": null,
+    "portions": null,
+    "emoji": "🍪",
+    "color": "#f7e9f3",
+    "image": "",
+    "favorite": false,
+    "source": "https://www.chefkoch.de/rezepte/899741195381381/RRs-unverwuestliche-Ausstech-Plaetzchen.html",
+    "ingredients": [],
+    "steps": [],
+    "sourceStatus": "link",
+    "unitLabel": "Portionen"
+  },
+  {
+    "id": "anders-import-16",
+    "title": "Engelsaugen",
+    "description": "Mürbe Plätzchen mit Marmeladenfüllung.",
+    "category": "Weihnachtsbäckerei",
+    "time": 55,
+    "portions": 40,
+    "emoji": "🍪",
+    "color": "#fff0d4",
+    "image": "",
+    "favorite": false,
+    "source": "https://www.chefkoch.de/rezepte/160601070188995/Engelsaugen.html",
+    "ingredients": [
+      {
+        "amount": 240,
+        "unit": "g",
+        "name": "Mehl"
+      },
+      {
+        "amount": 150,
+        "unit": "g",
+        "name": "Butter"
+      },
+      {
+        "amount": 2,
+        "unit": "Stück",
+        "name": "Eigelb"
+      },
+      {
+        "amount": 70,
+        "unit": "g",
+        "name": "Puderzucker"
+      },
+      {
+        "amount": 2,
+        "unit": "TL",
+        "name": "Vanillezucker"
+      },
+      {
+        "amount": 1,
+        "unit": "Stück",
+        "name": "Bio-Zitrone (Abrieb)"
+      },
+      {
+        "amount": 1,
+        "unit": "Prise",
+        "name": "Salz"
+      },
+      {
+        "amount": 0,
+        "unit": "",
+        "name": "Himbeer- oder Johannisbeerkonfitüre"
+      },
+      {
+        "amount": 0,
+        "unit": "",
+        "name": "Puderzucker zum Bestäuben"
+      }
+    ],
+    "steps": [
+      "Alle Teigzutaten verkneten und etwa 1–2 Stunden kalt stellen.",
+      "Kleine Kugeln rollen, in jede eine Mulde drücken und mit Konfitüre füllen.",
+      "Bei 180 °C Umluft etwa 10–15 Minuten backen und nach dem Abkühlen mit Puderzucker bestäuben."
+    ],
+    "sourceStatus": "geprüft",
+    "unitLabel": "Stück",
+    "note": "Zusätzlich 1–2 Stunden Kühlzeit einplanen."
+  },
+  {
+    "id": "anders-import-17",
+    "title": "Uromas Vanillekipferl",
+    "description": "Zarte Vanillekipferl mit Mandeln.",
+    "category": "Weihnachtsbäckerei",
+    "time": 60,
+    "portions": 90,
+    "emoji": "🥐",
+    "color": "#e9e3f8",
+    "image": "",
+    "favorite": false,
+    "source": "https://www.chefkoch.de/rezepte/403911129675192/Uromas-Vanillekipferl.html",
+    "ingredients": [
+      {
+        "amount": 250,
+        "unit": "g",
+        "name": "Mehl"
+      },
+      {
+        "amount": 210,
+        "unit": "g",
+        "name": "weiche Butter"
+      },
+      {
+        "amount": 100,
+        "unit": "g",
+        "name": "gemahlene Mandeln"
+      },
+      {
+        "amount": 80,
+        "unit": "g",
+        "name": "Zucker oder Puderzucker"
+      },
+      {
+        "amount": 2,
+        "unit": "Pck.",
+        "name": "Vanillezucker für den Teig"
+      },
+      {
+        "amount": 1,
+        "unit": "Prise",
+        "name": "Salz"
+      },
+      {
+        "amount": 1,
+        "unit": "Pck.",
+        "name": "Puderzucker zum Wälzen"
+      },
+      {
+        "amount": 2,
+        "unit": "Pck.",
+        "name": "Vanillezucker zum Wälzen"
+      }
+    ],
+    "steps": [
+      "Zutaten für den Teig verkneten, Rollen formen und mindestens 30 Minuten kalt stellen.",
+      "Aus Teigstückchen kleine Hörnchen formen und auf ein Blech mit Backpapier setzen.",
+      "Bei 175 °C Umluft ungefähr 10–15 Minuten backen und noch warm vorsichtig in Vanille-Puderzucker wenden."
+    ],
+    "sourceStatus": "geprüft",
+    "unitLabel": "Stück",
+    "note": "Menge ergibt laut Quelle etwa 80–100 Stück, hier mit 90 Stück gerechnet."
+  },
+  {
+    "id": "anders-import-18",
+    "title": "Lothars beste Nürnberger Elisenlebkuchen",
+    "description": "Würzige Elisenlebkuchen zur Weihnachtszeit.",
+    "category": "Weihnachtsbäckerei",
+    "time": null,
+    "portions": null,
+    "emoji": "🍯",
+    "color": "#fbe7e9",
+    "image": "",
+    "favorite": false,
+    "source": "https://www.chefkoch.de/rezepte/1010591206190843/Lothars-beste-Nuernberger-Elisenlebkuchen.html",
+    "ingredients": [],
+    "steps": [],
+    "sourceStatus": "link",
+    "unitLabel": "Portionen"
+  },
+  {
+    "id": "anders-import-19",
+    "title": "Schneller Flammkuchen",
+    "description": "Knuspriger Flammkuchen mit dünnem Teig.",
+    "category": "Hauptgerichte",
+    "time": null,
+    "portions": null,
+    "emoji": "🍕",
+    "color": "#fae5dd",
+    "image": "",
+    "favorite": false,
+    "source": "https://www.chefkoch.de/rezepte/1107291216818673/Schneller-Flammkuchen.html",
+    "ingredients": [],
+    "steps": [],
+    "sourceStatus": "link",
+    "unitLabel": "Portionen"
+  },
+  {
+    "id": "anders-import-20",
+    "title": "Nudelauflauf mit Brokkoli und Schinken",
+    "description": "Herzhafter Auflauf mit Brokkoli.",
+    "category": "Hauptgerichte",
+    "time": null,
+    "portions": null,
+    "emoji": "🥦",
+    "color": "#e4f3e9",
+    "image": "",
+    "favorite": false,
+    "source": "https://www.chefkoch.de/rezepte/472031140743499/Nudelauflauf-mit-Brokkoli-und-Schinken.html",
+    "ingredients": [],
+    "steps": [],
+    "sourceStatus": "link",
+    "unitLabel": "Portionen"
+  },
+  {
+    "id": "anders-import-21",
+    "title": "Lakritz-Likör „7 auf 100“",
+    "description": "Ein selbstgemachter Likör mit Lakritz.",
+    "category": "Getränke",
+    "time": null,
+    "portions": null,
+    "emoji": "🥃",
+    "color": "#f7e9f3",
+    "image": "",
+    "favorite": false,
+    "source": "https://www.chefkoch.de/rezepte/1270371232289276/Lakritz-Likoer-7-auf-100.html",
+    "ingredients": [],
+    "steps": [],
+    "sourceStatus": "link",
+    "unitLabel": "Portionen"
+  },
+  {
+    "id": "anders-import-22",
+    "title": "Paprika-Sahne-Hähnchen",
+    "description": "Hähnchen aus dem Ofen mit cremiger Paprikasoße.",
+    "category": "Hauptgerichte",
+    "time": 60,
+    "portions": 4,
+    "emoji": "🍗",
+    "color": "#fff0d4",
+    "image": "",
+    "favorite": false,
+    "source": "https://www.chefkoch.de/rezepte/22771005725755/Paprika-Sahne-Haehnchen.html",
+    "ingredients": [
+      {
+        "amount": 4,
+        "unit": "Stück",
+        "name": "Hähnchenbrustfilets"
+      },
+      {
+        "amount": 2,
+        "unit": "Stück",
+        "name": "rote Paprika"
+      },
+      {
+        "amount": 1,
+        "unit": "Stück",
+        "name": "grüne Paprika"
+      },
+      {
+        "amount": 1,
+        "unit": "Stück",
+        "name": "Zwiebel"
+      },
+      {
+        "amount": 2,
+        "unit": "Zehen",
+        "name": "Knoblauch"
+      },
+      {
+        "amount": 1,
+        "unit": "Stück",
+        "name": "getrocknete Chilischote"
+      },
+      {
+        "amount": 1,
+        "unit": "Becher",
+        "name": "Sahne"
+      },
+      {
+        "amount": 1,
+        "unit": "Becher",
+        "name": "Schmand"
+      },
+      {
+        "amount": 1,
+        "unit": "TL",
+        "name": "Tomatenmark"
+      },
+      {
+        "amount": 125,
+        "unit": "ml",
+        "name": "Gemüsebrühe"
+      },
+      {
+        "amount": 1,
+        "unit": "EL",
+        "name": "Paprikapulver edelsüß"
+      },
+      {
+        "amount": 1,
+        "unit": "TL",
+        "name": "Paprikapulver rosenscharf"
+      },
+      {
+        "amount": 100,
+        "unit": "g",
+        "name": "geriebener Käse"
+      },
+      {
+        "amount": 0,
+        "unit": "",
+        "name": "Öl und Salz"
+      }
+    ],
+    "steps": [
+      "Hähnchenfilets würzen und in eine Auflaufform setzen. Paprika in Streifen schneiden und darauf verteilen.",
+      "Zwiebel, Knoblauch und Chili anschwitzen. Sahne, Schmand, Tomatenmark und Brühe zu einer würzigen Soße verarbeiten.",
+      "Die Soße über das Hähnchen geben, Käse darüberstreuen und im Ofen etwa 40 Minuten garen."
+    ],
+    "sourceStatus": "geprüft",
+    "unitLabel": "Portionen"
+  },
+  {
+    "id": "anders-import-23",
+    "title": "Wiener Rindsgulasch",
+    "description": "Ein herzhafter Gulaschklassiker.",
+    "category": "Hauptgerichte",
+    "time": null,
+    "portions": null,
+    "emoji": "🥘",
+    "color": "#e9e3f8",
+    "image": "",
+    "favorite": false,
+    "source": "https://www.chefkoch.de/rezepte/641851165225840/Wiener-Rindsgulasch.html",
+    "ingredients": [],
+    "steps": [],
+    "sourceStatus": "link",
+    "unitLabel": "Portionen"
+  },
+  {
+    "id": "anders-import-24",
+    "title": "Schupfnudel-Wirsing-Gratin mit Kasseler",
+    "description": "Deftiges Wintergratin mit Schupfnudeln.",
+    "category": "Hauptgerichte",
+    "time": null,
+    "portions": null,
+    "emoji": "🥬",
+    "color": "#fbe7e9",
+    "image": "",
+    "favorite": false,
+    "source": "https://www.chefkoch.de/rezepte/2059481333174116/Schupfnudel-Wirsing-Gratin-mit-Kasseler.html",
+    "ingredients": [],
+    "steps": [],
+    "sourceStatus": "link",
+    "unitLabel": "Portionen"
+  },
+  {
+    "id": "anders-import-25",
+    "title": "Hähnchen süßsauer wie im Chinarestaurant",
+    "description": "Knuspriges Hähnchen mit süßsaurer Soße.",
+    "category": "Hauptgerichte",
+    "time": null,
+    "portions": null,
+    "emoji": "🍍",
+    "color": "#fae5dd",
+    "image": "",
+    "favorite": false,
+    "source": "https://www.chefkoch.de/rezepte/2826671434712499/Haehnchen-suesssauer-wie-im-Chinarestaurant.html",
+    "ingredients": [],
+    "steps": [],
+    "sourceStatus": "link",
+    "unitLabel": "Portionen"
+  },
+  {
+    "id": "anders-import-26",
+    "title": "Käse-Lauch-Suppe mit Hackfleisch",
+    "description": "Wärmende, cremige Suppe mit Lauch und Hackfleisch.",
+    "category": "Snacks & Suppen",
+    "time": 35,
+    "portions": 4,
+    "emoji": "🥣",
+    "color": "#e4f3e9",
+    "image": "",
+    "favorite": false,
+    "source": "https://www.chefkoch.de/rezepte/982031203667502/Kaese-Lauch-Suppe-mit-Hackfleisch.html",
+    "ingredients": [
+      {
+        "amount": 2,
+        "unit": "Stück",
+        "name": "kleine Aufbackbaguettes"
+      },
+      {
+        "amount": 3,
+        "unit": "EL",
+        "name": "Öl"
+      },
+      {
+        "amount": 500,
+        "unit": "g",
+        "name": "gemischtes Hackfleisch"
+      },
+      {
+        "amount": 3,
+        "unit": "Stangen",
+        "name": "Lauch"
+      },
+      {
+        "amount": 700,
+        "unit": "ml",
+        "name": "Wasser"
+      },
+      {
+        "amount": 3,
+        "unit": "Stück",
+        "name": "Gemüsebrühwürfel"
+      },
+      {
+        "amount": 250,
+        "unit": "g",
+        "name": "Schmelzkäse"
+      },
+      {
+        "amount": 150,
+        "unit": "g",
+        "name": "Crème fraîche"
+      },
+      {
+        "amount": 0,
+        "unit": "",
+        "name": "Salz, Pfeffer, Muskat, Knoblauch- und Zwiebelpulver"
+      }
+    ],
+    "steps": [
+      "Hackfleisch in einem Topf mit Öl krümelig braten, dann Lauchringe hinzugeben.",
+      "Mit Wasser und Brühe aufgießen, etwa 10 Minuten köcheln lassen.",
+      "Schmelzkäse und Crème fraîche einrühren und abschmecken. Dazu aufgebackenes Baguette reichen."
+    ],
+    "sourceStatus": "geprüft",
+    "unitLabel": "Portionen"
+  },
+  {
+    "id": "anders-import-27",
+    "title": "Das beste Kartoffelgratin",
+    "description": "Kartoffeln in einer cremigen Ofensoße.",
+    "category": "Beilagen & Salate",
+    "time": 90,
+    "portions": 4,
+    "emoji": "🥔",
+    "color": "#f7e9f3",
+    "image": "",
+    "favorite": false,
+    "source": "https://www.chefkoch.de/rezepte/644981165672475/Das-beste-Kartoffelgratin.html",
+    "ingredients": [
+      {
+        "amount": 0,
+        "unit": "",
+        "name": "Butter für die Form"
+      },
+      {
+        "amount": 1,
+        "unit": "Zehe",
+        "name": "Knoblauch"
+      },
+      {
+        "amount": 800,
+        "unit": "g",
+        "name": "Kartoffeln"
+      },
+      {
+        "amount": 250,
+        "unit": "ml",
+        "name": "Sahne"
+      },
+      {
+        "amount": 250,
+        "unit": "ml",
+        "name": "Milch"
+      },
+      {
+        "amount": 1,
+        "unit": "EL",
+        "name": "Gemüsebrühepulver"
+      },
+      {
+        "amount": 0,
+        "unit": "",
+        "name": "Kräutersalz"
+      },
+      {
+        "amount": 0,
+        "unit": "",
+        "name": "Pfeffer und Muskat"
+      },
+      {
+        "amount": 0,
+        "unit": "",
+        "name": "Butterflöckchen"
+      }
+    ],
+    "steps": [
+      "Eine Auflaufform ausbuttern und mit Knoblauch ausreiben. Kartoffeln schälen und sehr dünn hobeln.",
+      "Kartoffeln schichten und mit Salz und Muskat würzen. Sahne, Milch und Brühepulver mischen und darübergießen.",
+      "Butterflöckchen darauf geben und bei 180 °C Ober-/Unterhitze rund eine Stunde backen."
+    ],
+    "sourceStatus": "geprüft",
+    "unitLabel": "Portionen"
+  },
+  {
+    "id": "anders-import-28",
+    "title": "Königsberger Klopse",
+    "description": "Ein Klassiker mit heller Kapernsoße.",
+    "category": "Hauptgerichte",
+    "time": null,
+    "portions": null,
+    "emoji": "🍽️",
+    "color": "#fff0d4",
+    "image": "",
+    "favorite": false,
+    "source": "https://www.chefkoch.de/rezepte/547961152362440/Koenigsberger-Klopse.html",
+    "ingredients": [],
+    "steps": [],
+    "sourceStatus": "link",
+    "unitLabel": "Portionen"
+  },
+  {
+    "id": "anders-import-29",
+    "title": "Das kleine Schloßgeheimnis",
+    "description": "Schweinefilet mit Pilzen, Camembert und Soße.",
+    "category": "Hauptgerichte",
+    "time": 60,
+    "portions": 4,
+    "emoji": "🍖",
+    "color": "#e9e3f8",
+    "image": "",
+    "favorite": false,
+    "source": "https://www.chefkoch.de/rezepte/64391023778894/Das-kleine-Schlossgeheimnis.html",
+    "ingredients": [
+      {
+        "amount": 1000,
+        "unit": "g",
+        "name": "Schweinefilet"
+      },
+      {
+        "amount": 0,
+        "unit": "",
+        "name": "Salz und Pfeffer"
+      },
+      {
+        "amount": 2,
+        "unit": "EL",
+        "name": "Butter"
+      },
+      {
+        "amount": 2,
+        "unit": "EL",
+        "name": "Mehl"
+      },
+      {
+        "amount": 125,
+        "unit": "ml",
+        "name": "Brühe"
+      },
+      {
+        "amount": 125,
+        "unit": "ml",
+        "name": "Milch"
+      },
+      {
+        "amount": 250,
+        "unit": "ml",
+        "name": "Sahne"
+      },
+      {
+        "amount": 0,
+        "unit": "",
+        "name": "Weißwein, Zitronensaft und Muskat"
+      },
+      {
+        "amount": 1,
+        "unit": "EL",
+        "name": "Kerbel"
+      },
+      {
+        "amount": 2,
+        "unit": "EL",
+        "name": "Petersilie"
+      },
+      {
+        "amount": 0,
+        "unit": "",
+        "name": "Dill"
+      },
+      {
+        "amount": 500,
+        "unit": "g",
+        "name": "Champignons"
+      },
+      {
+        "amount": 2,
+        "unit": "Stück",
+        "name": "Camembert"
+      }
+    ],
+    "steps": [
+      "Schweinefilet in Scheiben anbraten, Champignons separat dünsten.",
+      "Butter und Mehl anschwitzen und mit Brühe, Milch und Sahne zu einer Soße verkochen. Mit Kräutern und Gewürzen abschmecken.",
+      "Fleisch, Pilze und Camembert in einer Form schichten, Soße darübergießen und im Backofen heiß werden lassen."
+    ],
+    "sourceStatus": "geprüft",
+    "unitLabel": "Portionen"
+  },
+  {
+    "id": "anders-import-30",
+    "title": "Die echte Sauce Bolognese",
+    "description": "Eine klassische, aromatische Bolognese.",
+    "category": "Hauptgerichte",
+    "time": null,
+    "portions": null,
+    "emoji": "🍝",
+    "color": "#fbe7e9",
+    "image": "",
+    "favorite": false,
+    "source": "https://www.chefkoch.de/rezepte/772011180069862/Die-echte-Sauce-Bolognese.html",
+    "ingredients": [],
+    "steps": [],
+    "sourceStatus": "link",
+    "unitLabel": "Portionen"
+  },
+  {
+    "id": "anders-import-31",
+    "title": "Bauerntopf",
+    "description": "Eintopf mit Hackfleisch, Kartoffeln und Gemüse.",
+    "category": "Snacks & Suppen",
+    "time": 60,
+    "portions": 3,
+    "emoji": "🍲",
+    "color": "#fae5dd",
+    "image": "",
+    "favorite": false,
+    "source": "https://www.chefkoch.de/rezepte/1385291243604216/Bauerntopf.html",
+    "ingredients": [
+      {
+        "amount": 500,
+        "unit": "g",
+        "name": "Kartoffeln"
+      },
+      {
+        "amount": 2,
+        "unit": "Stück",
+        "name": "Möhren"
+      },
+      {
+        "amount": 2,
+        "unit": "Stück",
+        "name": "Paprika"
+      },
+      {
+        "amount": 1,
+        "unit": "EL",
+        "name": "Öl"
+      },
+      {
+        "amount": 500,
+        "unit": "g",
+        "name": "Hackfleisch"
+      },
+      {
+        "amount": 400,
+        "unit": "g",
+        "name": "stückige Dosentomaten"
+      },
+      {
+        "amount": 2,
+        "unit": "EL",
+        "name": "Tomatenmark"
+      },
+      {
+        "amount": 300,
+        "unit": "ml",
+        "name": "Gemüsebrühe"
+      },
+      {
+        "amount": 1,
+        "unit": "TL",
+        "name": "Zucker"
+      },
+      {
+        "amount": 0,
+        "unit": "",
+        "name": "Salz"
+      },
+      {
+        "amount": 0,
+        "unit": "",
+        "name": "Schmand nach Wunsch"
+      }
+    ],
+    "steps": [
+      "Kartoffeln, Möhren und Paprika würfeln.",
+      "Hackfleisch anbraten, Tomatenmark kurz mitrösten und mit Dosentomaten und Brühe ablöschen.",
+      "Gemüse zufügen und etwa 40 Minuten sanft köcheln lassen. Mit Zucker, Salz und etwas Schmand abschmecken."
+    ],
+    "sourceStatus": "geprüft",
+    "unitLabel": "Portionen"
+  },
+  {
+    "id": "anders-import-32",
+    "title": "Schwedische Kartoffeln",
+    "description": "Eingeschnittene Ofenkartoffeln in cremiger Soße.",
+    "category": "Beilagen & Salate",
+    "time": 80,
+    "portions": 4,
+    "emoji": "🥔",
+    "color": "#e4f3e9",
+    "image": "",
+    "favorite": false,
+    "source": "https://www.chefkoch.de/rezepte/1386571243753438/Schwedische-Kartoffeln.html",
+    "ingredients": [
+      {
+        "amount": 200,
+        "unit": "g",
+        "name": "Sauerrahm"
+      },
+      {
+        "amount": 200,
+        "unit": "g",
+        "name": "Crème fraîche"
+      },
+      {
+        "amount": 400,
+        "unit": "ml",
+        "name": "Fleischbrühe"
+      },
+      {
+        "amount": 1000,
+        "unit": "g",
+        "name": "kleine Drillinge"
+      },
+      {
+        "amount": 50,
+        "unit": "g",
+        "name": "Butter"
+      },
+      {
+        "amount": 75,
+        "unit": "g",
+        "name": "Katenschinken"
+      },
+      {
+        "amount": 1,
+        "unit": "TL",
+        "name": "Rosmarin"
+      },
+      {
+        "amount": 5,
+        "unit": "Scheiben",
+        "name": "Toastbrot"
+      }
+    ],
+    "steps": [
+      "Sauerrahm, Crème fraîche und Brühe in einer Auflaufform verrühren.",
+      "Kartoffeln mehrmals quer einschneiden, aber nicht durchtrennen, und in die Soße setzen.",
+      "Bei 200 °C Ober-/Unterhitze 45–60 Minuten garen. Butter, Schinken, Rosmarin und Toastwürfel darüberstreuen und knusprig fertigbacken."
+    ],
+    "sourceStatus": "geprüft",
+    "unitLabel": "Portionen"
+  },
+  {
+    "id": "anders-import-33",
+    "title": "Schlemmertopf mit Hackfleisch",
+    "description": "Herzhaftes Gericht aus dem Ofen.",
+    "category": "Hauptgerichte",
+    "time": null,
+    "portions": null,
+    "emoji": "🥘",
+    "color": "#f7e9f3",
+    "image": "",
+    "favorite": false,
+    "source": "https://www.chefkoch.de/rezepte/884541194027076/Schlemmertopf-mit-Hackfleisch.html",
+    "ingredients": [],
+    "steps": [],
+    "sourceStatus": "link",
+    "unitLabel": "Portionen"
+  },
+  {
+    "id": "anders-import-34",
+    "title": "Saftiger Obst-Streusel-Kuchen",
+    "description": "Veganer Obstkuchen mit knusprigen Streuseln.",
+    "category": "Backen & Süßes",
+    "time": 75,
+    "portions": 12,
+    "emoji": "🍰",
+    "color": "#fff0d4",
+    "image": "",
+    "favorite": false,
+    "source": "https://www.blueberryvegan.com/saftiger-obst-streusel-kuchen/",
+    "ingredients": [
+      {
+        "amount": 120,
+        "unit": "g",
+        "name": "Mehl für die Streusel"
+      },
+      {
+        "amount": 80,
+        "unit": "g",
+        "name": "vegane Butter für die Streusel"
+      },
+      {
+        "amount": 80,
+        "unit": "g",
+        "name": "Zucker für die Streusel"
+      },
+      {
+        "amount": 1,
+        "unit": "Prise",
+        "name": "Salz"
+      },
+      {
+        "amount": 0,
+        "unit": "",
+        "name": "Vanille"
+      },
+      {
+        "amount": 250,
+        "unit": "g",
+        "name": "Mehl für den Teig"
+      },
+      {
+        "amount": 150,
+        "unit": "g",
+        "name": "Zucker für den Teig"
+      },
+      {
+        "amount": 0.5,
+        "unit": "Pck.",
+        "name": "Backpulver"
+      },
+      {
+        "amount": 0.5,
+        "unit": "Stück",
+        "name": "Zitrone"
+      },
+      {
+        "amount": 100,
+        "unit": "g",
+        "name": "Sojajoghurt"
+      },
+      {
+        "amount": 75,
+        "unit": "g",
+        "name": "vegane Butter für den Teig"
+      },
+      {
+        "amount": 1,
+        "unit": "TL",
+        "name": "Vanilleextrakt"
+      },
+      {
+        "amount": 180,
+        "unit": "ml",
+        "name": "Sprudelwasser"
+      },
+      {
+        "amount": 500,
+        "unit": "g",
+        "name": "Obst nach Wahl"
+      }
+    ],
+    "steps": [
+      "Ofen auf 180 °C vorheizen. Obst waschen, entsteinen und in Stücke schneiden.",
+      "Für die Streusel Mehl, Zucker, Salz, Vanille und vegane Butter verreiben.",
+      "Den Rührteig aus den übrigen Zutaten zubereiten, Obst darauf verteilen und mit Streuseln bedecken.",
+      "In einer gefetteten Form ungefähr eine Stunde backen."
+    ],
+    "sourceStatus": "geprüft",
+    "unitLabel": "Stück"
+  },
+  {
+    "id": "anders-import-35",
+    "title": "Tomate-Mozzarella-Baguette",
+    "description": "Überbackenes Baguette mit Basilikum.",
+    "category": "Snacks & Suppen",
+    "time": 30,
+    "portions": 1,
+    "emoji": "🥖",
+    "color": "#e9e3f8",
+    "image": "",
+    "favorite": false,
+    "source": "https://www.einfachkochen.de/rezepte/tomate-mozzarella-baguette-das-beste-blitzrezept",
+    "ingredients": [
+      {
+        "amount": 1,
+        "unit": "Stück",
+        "name": "Baguette"
+      },
+      {
+        "amount": 1,
+        "unit": "Zehe",
+        "name": "Knoblauch"
+      },
+      {
+        "amount": 4,
+        "unit": "EL",
+        "name": "Olivenöl"
+      },
+      {
+        "amount": 4,
+        "unit": "Stück",
+        "name": "Tomaten"
+      },
+      {
+        "amount": 2,
+        "unit": "Kugeln",
+        "name": "Mozzarella"
+      },
+      {
+        "amount": 1,
+        "unit": "Bund",
+        "name": "Basilikum"
+      },
+      {
+        "amount": 0,
+        "unit": "",
+        "name": "Salz und Pfeffer"
+      }
+    ],
+    "steps": [
+      "Baguette halbieren und die Schnittseiten mit Knoblauch und Olivenöl bestreichen.",
+      "Tomaten und Mozzarella in Scheiben schneiden und auf den Baguettehälften verteilen.",
+      "Bei 175 °C Umluft etwa 10 Minuten überbacken, dann mit Basilikum, Salz und Pfeffer würzen."
+    ],
+    "sourceStatus": "geprüft",
+    "unitLabel": "Portionen"
+  },
+  {
+    "id": "anders-import-36",
+    "title": "Frühlingsragout mit Hähnchen",
+    "description": "Leichtes Hähnchenragout für den Frühling.",
+    "category": "Hauptgerichte",
+    "time": null,
+    "portions": null,
+    "emoji": "🍲",
+    "color": "#fbe7e9",
+    "image": "",
+    "favorite": false,
+    "source": "https://www.chefkoch.de/rezepte/261361101917442/Fruehlingsragout-mit-Haehnchen.html",
+    "ingredients": [],
+    "steps": [],
+    "sourceStatus": "link",
+    "unitLabel": "Portionen"
+  }
+]
