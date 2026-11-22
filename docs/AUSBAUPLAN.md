@@ -20,7 +20,8 @@ Das GitHub-Repository und GitHub Pages sind **öffentlich**. Keine privaten Reze
 
 ## Phase 2 – Rezepte hinzufügen und benutzen
 
-- [ ] **URL-Import:** Chefkoch, einfachkochen.de und weitere Seiten über Schema.org/JSON-LD (mit Vorschau und manueller Prüfung)
+- [x] **URL-Import (erste Version):** Chefkoch, einfachkochen.de und blueberryvegan.com über Schema.org/JSON-LD; Zubereitung und Zutaten prüfen und selektiv übernehmen, soweit die Seiten strukturierte Daten anbieten
+- [ ] **URL-Import ausbauen:** Parser-Fallbacks für Webseiten ohne JSON-LD, bessere Fehlerdiagnose und Tests mit echten Quellen
 - [ ] **Foto-/KI-Import:** Zutaten, Mengen, Portionen und Schritte aus Screenshots/Kochbuchfotos erkennen; Ergebnis kontrollierbar
 - [ ] **Kochmodus:** großer Schritt-für-Schritt-Text, abhakbare Zutaten, mehrere Küchentimer, Display wach halten sofern Browser erlaubt
 - [ ] **Notizen:** „Mehr würzen“, Kinderfeedback, eigene Änderungen und Varianten
